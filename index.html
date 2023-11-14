@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header>
+    <div class="header-container">
+        <div class="brand-logo">
+            <img src="./Asset 1@3x 1.svg" alt="header-logo">
+        </div>
+        <ul class="navigation-menu">
+            <li><a href="#">БАНК</a></li>
+            <li><a href="#">БИЗНЕС</a></li>
+            <li><a href="#">ИНВЕСТИЦИИ</a></li>
+            <li><a href="#">СТРАХОВАНИЕ</a></li>
+            <li><a href="#">МОБАЙЛ</a></li>
+            <li><a href="#">ПУТЕШЕСТВИЯ</a></li>
+            <li><a href="#">РАЗВЛЕЧЕНИЯ</a></li>
+        </ul>
+        <a class="login-button" href="#">ВОЙТИ</a>
+    </div>
+</header>
+<div class="main-content">
+    <h1>Конвертер валют онлайн</h1>
+    <div class="conversion-section">
+        <div class="conversion-inputs">
+            <span class="input-label">У меня есть</span>
+            <div class="currency-options">
+                <div class="currency-choice">RUB</div>
+                <div class="currency-choice">USD</div>
+                <div class="currency-choice">EUR</div>
+                <div class="currency-choice active">AZN</div>
+            </div>
+            <div class="conversion-details">
+                <input type="text" id="from-input">
+                <span class="conversion-rate">1 <span id="from-currency">USD</span> = <span id="from-rate">0.011</span> <span id="from-target">RUB</span></span>
+            </div>
+        </div>
+        <div class="conversion-inputs">
+            <span class="input-label">Хочу приобрести</span>
+            <div class="currency-options">
+                <div class="currency-choice">RUB</div>
+                <div class="currency-choice">USD</div>
+                <div class="currency-choice">EUR</div>
+                <div class="currency-choice active">AZN</div>
+            </div>
+            <div class="conversion-details">
+                <input type="text" id="to-input">
+                <span class="conversion-rate">1 <span id="to-currency">USD</span> = <span id="to-rate">0.011</span> <span id="to-target">RUB</span></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="./script.js"></script>
+</body>
+</html>
