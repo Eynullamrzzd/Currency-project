@@ -94,7 +94,7 @@ h1 {
     margin-bottom: 20px;
 }
 
-.currency-choice {
+.currency-choice,.currency-choice1 {
     padding: 8px 20px;
     border: 1px solid #e5e5e5!important;
     cursor: pointer;  
@@ -108,8 +108,14 @@ h1 {
 .currency-choice:first-child {
     border-radius: 5px 0 0 5px;
 }
+.currency-choice1:first-child {
+    border-radius: 5px 0 0 5px;
+}
 
 .currency-choice:last-child {
+    border-radius: 0 5px 5px 0;
+}
+.currency-choice1:last-child {
     border-radius: 0 5px 5px 0;
 }
 
@@ -136,4 +142,14 @@ h1 {
     font-weight: 500;
     color: #C6C6C6;
     padding: 5px;
+}
+
+.currency-choice.active {
+    background-color: #833AE0;
+    color: #ffffff;
+}
+
+.currency-choice1.active {
+    background-color: #833AE0;
+    color: #ffffff;
 }
