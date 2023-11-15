@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function () {
       event.target.style.color = 'white';
   
       
-      // inputField.placeholder = `${selectedCurrency}`;
+      inputField.placeholder = `${selectedCurrency}`;
   
       
       const fromCurrency = document.getElementById('from-currency').textContent;
@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function () {
           toCurrency: toCurrency,
         }));
       } else {
-        // alert('Something went wrong. Please try again later.');
+        alert('Something went wrong. Please try again later.');
       }
     }
   
@@ -111,12 +111,12 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById('to-rate').textContent = exchangeRateRubToUsd.toFixed(4);
         document.getElementById('to-target').textContent = 'USD';
   
-        // Calculate and display the converted value in the right input
+        
         const convertedValueUsd = (100 * exchangeRateRubToUsd).toFixed(2);
         document.getElementById('to-input').value = parseFloat(convertedValueUsd).toFixed(4);
       } else {
         
-        // displayErrorMessage('Something went wrong. Please try again later.');
+        displayErrorMessage('Something went wrong. Please try again later.');
       }
     }
   
