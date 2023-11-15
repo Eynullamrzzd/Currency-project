@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
         return data.rates[targetCurrency];
       } catch (error) {
         
-        // displayErrorMessage('Something went wrong. Please try again later.');
+        displayErrorMessage('Something went wrong. Please try again later.');
         return null;
       }
     }
