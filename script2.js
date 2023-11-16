@@ -1,6 +1,6 @@
 
 
-document.addEventListener("DOMContentLoaded", async function () {
+
     const apiUrl = "https://v6.exchangerate-api.com/v6/53976dffe728750b9dd8a22b/latest/";
     let exchangeRates;
 
@@ -57,7 +57,6 @@ document.addEventListener("DOMContentLoaded", async function () {
             console.error("Error updating conversion details:", error);
         }
     }
-
     
     const leftCurrencyChoices = document.querySelectorAll(".currency-choice");
 
@@ -125,4 +124,4 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     
     updateConversionDetails();
-});
+
