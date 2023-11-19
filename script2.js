@@ -26,6 +26,19 @@
         }
     }
 
+    async function updateInputValues(a,b) {
+        document.querySelector("#from-currency").innerText = a;
+        document.querySelector("#from-target").innerText = b;
+        document.querySelector("#to-currency").innerText = b;
+        document.querySelector("#to-target").innerText = a;
+
+        let exchangeRates;
+        await fetchExchangeRates(b).then(res => exchangeRates = res);
+        console.log(a + "***");
+        toRateElement.innerText = exchangeRates[a];
+        console.log(exchangeRates);
+    }
+
     
     async function updateConversionDetails() {
         try {
@@ -52,17 +65,21 @@
             document.getElementById('to-target').innerText = fromCurrency;
 
             
-            updateInputValues();
+            updateInputValues(fromCurrency,toCurrency);
         } catch (error) {
             console.error("Error updating conversion details:", error);
         }
     }
-    
+
     const leftCurrencyChoices = document.querySelectorAll(".currency-choice");
 
     leftCurrencyChoices.forEach((currencyChoice) => {
         currencyChoice.addEventListener("click", function () {
             handleCurrencyClick(currencyChoice, leftCurrencyChoices);
+            const toCurrency = toCurrencySelect.innerText;
+            const fromCurrencyv= fromCurrencySelect.innerText;
+
+            updateInputValues(toCurrency, currencyChoice.innerText)
         });
     });
 
@@ -72,6 +89,10 @@
     rightCurrencyChoices.forEach((currencyChoice) => {
         currencyChoice.addEventListener("click", function () {
             handleCurrencyClick(currencyChoice, rightCurrencyChoices);
+            const fromCurrency = fromCurrencySelect.innerText;
+            const toCurrency = toCurrencySelect.innerText;
+
+            updateInputValues(fromCurrency, currencyChoice.innerText)
         });
     });
 
@@ -82,13 +103,13 @@
             choice.classList.remove("active");
         });
 
-        
-        currencyChoice.classList.add("active");
+       
+        currencyChoice.classList.add("active"); 
+
 
         
-        await updateConversionDetails();
     }
-
+    
     
     fromInputElement.addEventListener("input", function () {
         
